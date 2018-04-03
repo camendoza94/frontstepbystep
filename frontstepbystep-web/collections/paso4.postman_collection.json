@@ -1,0 +1,175 @@
+{
+	"info": {
+		"name": "paso4",
+		"_postman_id": "596f05f9-e11c-01f4-980d-a2dda6d934e7",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create editorial",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "eb34650b-b456-4e2d-b893-33a13fc08fca",
+						"type": "text/javascript",
+						"exec": [
+							"var data= JSON.parse(responseBody);",
+							"console.log(responseCode.code);",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 12,\r\n  \"name\": \"Oveja gris\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/frontstepbystep-web/api/editorials",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"frontstepbystep-web",
+						"api",
+						"editorials"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "edit editorial",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "eb34650b-b456-4e2d-b893-33a13fc08fca",
+						"type": "text/javascript",
+						"exec": [
+							"var data= JSON.parse(responseBody);",
+							"console.log(responseCode.code);",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 20,\r\n  \"name\": \"Oveja negra\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/frontstepbystep-web/api/editorials/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"frontstepbystep-web",
+						"api",
+						"editorials",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get editorial",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8fc1a1de-414e-4894-a4b8-3920c917c91a",
+						"type": "text/javascript",
+						"exec": [
+							"var data= JSON.parse(responseBody);",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/frontstepbystep-web/api/editorials/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"frontstepbystep-web",
+						"api",
+						"editorials",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete editorial",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6ffe2060-ad36-4912-aa52-2b38ad21f4db",
+						"type": "text/javascript",
+						"exec": [
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/frontstepbystep-web/api/editorials/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"frontstepbystep-web",
+						"api",
+						"editorials",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
