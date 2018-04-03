@@ -1,18 +1,18 @@
 {
 	"info": {
-		"name": "paso4",
-		"_postman_id": "596f05f9-e11c-01f4-980d-a2dda6d934e7",
+		"name": "paso4-a",
+		"_postman_id": "a9b94b3b-e3fc-f28e-61c7-ca1597f9f541",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "create editorial",
+			"name": "create author",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "eb34650b-b456-4e2d-b893-33a13fc08fca",
+						"id": "ddb13079-8d9a-4adf-8fa2-7de276184020",
 						"type": "text/javascript",
 						"exec": [
 							"var data= JSON.parse(responseBody);",
@@ -32,10 +32,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"id\": 12,\r\n  \"name\": \"Oveja gris\"\r\n}"
+					"raw": "    {\n        \"birthDate\": \"1927-03-03T00:00:00-05:00\",\n        \"description\": \"fue un escritor, guionista, editor y periodista colombiano. En 1982 recibió el Premio Nobel de Literatura.\",\n        \"image\": \"https://commons.wikimedia.org/wiki/File:Gabriel_Garcia_Marquez.jpg\",\n        \"name\": \"Gabriel José de la Concordia García Márquez\"\n    }"
 				},
 				"url": {
-					"raw": "http://localhost:8080/frontstepbystep-web/api/editorials",
+					"raw": "http://localhost:8080/frontstepbystep-web/api/authors",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -44,7 +44,7 @@
 					"path": [
 						"frontstepbystep-web",
 						"api",
-						"editorials"
+						"authors"
 					]
 				},
 				"description": ""
@@ -52,12 +52,50 @@
 			"response": []
 		},
 		{
-			"name": "edit editorial",
+			"name": "get author",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "eb34650b-b456-4e2d-b893-33a13fc08fca",
+						"id": "cf0c80b2-369a-4e8b-acac-d0003228baec",
+						"type": "text/javascript",
+						"exec": [
+							"var data= JSON.parse(responseBody);",
+							"console.log(responseCode.code);",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/frontstepbystep-web/api/authors/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"frontstepbystep-web",
+						"api",
+						"authors",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "edit author",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "78e86110-8e3c-4937-b838-08eb2fe7831c",
 						"type": "text/javascript",
 						"exec": [
 							"var data= JSON.parse(responseBody);",
@@ -77,10 +115,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"id\": 20,\r\n  \"name\": \"Oveja negra\"\r\n}"
+					"raw": "    {\n        \"birthDate\": \"1927-03-03T00:00:00-05:00\",\n        \"description\": \"guionista, editor y periodista colombiano. En 1982 recibió el Premio Nobel de Literatura.\",\n        \"image\": \"https://commons.wikimedia.org/wiki/File:Gabriel_Garcia_Marquez.jpg\",\n        \"name\": \"mathew perry\"\n    }"
 				},
 				"url": {
-					"raw": "http://localhost:8080/frontstepbystep-web/api/editorials/1",
+					"raw": "http://localhost:8080/frontstepbystep-web/api/authors/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -89,7 +127,7 @@
 					"path": [
 						"frontstepbystep-web",
 						"api",
-						"editorials",
+						"authors",
 						"1"
 					]
 				},
@@ -98,49 +136,12 @@
 			"response": []
 		},
 		{
-			"name": "get editorial",
+			"name": "delete author",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "8fc1a1de-414e-4894-a4b8-3920c917c91a",
-						"type": "text/javascript",
-						"exec": [
-							"var data= JSON.parse(responseBody);",
-							"tests[\"Status code is 200\"] = responseCode.code === 200;"
-						]
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"url": {
-					"raw": "http://localhost:8080/frontstepbystep-web/api/editorials/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"frontstepbystep-web",
-						"api",
-						"editorials",
-						"1"
-					]
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "delete editorial",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "6ffe2060-ad36-4912-aa52-2b38ad21f4db",
+						"id": "a9106145-e2ac-41f4-aed3-c3c0299b0065",
 						"type": "text/javascript",
 						"exec": [
 							"",
@@ -154,7 +155,7 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:8080/frontstepbystep-web/api/editorials/1",
+					"raw": "http://localhost:8080/frontstepbystep-web/api/authors/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -163,7 +164,7 @@
 					"path": [
 						"frontstepbystep-web",
 						"api",
-						"editorials",
+						"authors",
 						"1"
 					]
 				},
