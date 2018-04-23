@@ -113,7 +113,7 @@
                             <goal>exec</goal>
                         </goals>
                     </execution>
-                    <execution>
+                <!--    <execution>
                         <id>exec-doc-angular</id>
                         <phase>package</phase>
                         <configuration>
@@ -124,7 +124,7 @@
                         <goals>
                             <goal>exec</goal>
                         </goals>
-                    </execution>
+                    </execution> -->
                 </executions>
             </plugin>
             <!--<plugin>
