@@ -33,6 +33,9 @@ SOFTWARE.
         <property name="waitGuardInterval">20</property>
         
     </extension>
+    <extension qualifier="jacoco">
+        <property name="includes">co.edu.uniandes.csw.bookstore.*</property>
+    </extension>
     <container qualifier="glassfish-embedded"
                default="true">
         <configuration>
