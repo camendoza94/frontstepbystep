@@ -55,6 +55,7 @@ import java.util.Date;
  * </pre>
  * @author ISIS2603
  */
+// TODO R1: Falta implementar Serializable.
 public class AuthorDTO {
 
     private Long id;

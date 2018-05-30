@@ -75,6 +75,7 @@ import java.util.List;
  * </pre>
  * @author ISIS2603
  */
+// TODO R1: Falta implementar Serializable.
 public class AuthorDetailDTO extends AuthorDTO {
 
     private List<BookDTO> books;

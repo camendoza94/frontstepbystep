@@ -71,6 +71,7 @@ import java.util.List;
  * </pre>
  * @author ISIS2603
  */
+// TODO R1: Falta implementar Serializable.
 public class EditorialDetailDTO extends EditorialDTO {
 
     /*

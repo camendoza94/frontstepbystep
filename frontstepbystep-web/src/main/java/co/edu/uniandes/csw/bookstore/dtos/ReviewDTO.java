@@ -53,6 +53,8 @@ import co.edu.uniandes.csw.bookstore.entities.ReviewEntity;
  * </pre>
  * @author ISIS2603
  */
+// TODO R1: Falta implementar Serializable.
+// TODO R5: Existen errores en la implementación del constructor de Entity a DTO.
 public class ReviewDTO {
 
     private Long id;
